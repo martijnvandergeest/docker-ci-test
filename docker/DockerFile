@@ -1,0 +1,7 @@
+FROM java:8
+
+WORKDIR /tmp
+
+ADD docker-ci-test-1.0-SNAPSHOT.jar .
+
+ENTRYPOINT ["java", "-jar", "/tmp/docker-ci-test-1.0-SNAPSHOT.jar", "firstArgument", "secondArgument"]
